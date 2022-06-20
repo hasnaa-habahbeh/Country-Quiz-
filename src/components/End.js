@@ -12,3 +12,4 @@ const Results = ({ counter = 0, setEnd }) => {
 };
 
 export default Results;
+align-items: flex-end;
