@@ -44,8 +44,19 @@
 
 .incorrect {
   background-color: red;
+  border-color: red;
+  color: #ffffff;
 }
 
 .correct {
   background-color: green;
+  border-color: green;
+  color: #ffffff;
+}
+
+.question-flag {
+  width: 200px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: -25px;
 }

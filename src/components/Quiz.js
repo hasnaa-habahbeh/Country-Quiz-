@@ -13,7 +13,7 @@ const Quiz = ({ countriesArray }) => {
 
   return (
     <Card>
-      {!end && (
+      {end && (
         <Question
           counter={counter}
           setCounter={setCounter}
@@ -21,7 +21,7 @@ const Quiz = ({ countriesArray }) => {
           countriesArray={countriesArray}
         />
       )}
-      {end && <End counter={counter} />}
+      {!end && <End counter={counter} setEnd={setEnd} />}
     </Card>
   );
 };
