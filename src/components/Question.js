@@ -12,6 +12,7 @@ const Question = ({ setEnd, counter, setCounter, countriesArray }) => {
 
   const getCountries = () => {
     setNext({...next, showButton: false});
+    setFourCountriesArray([]);
     let temp = [];
     let country = {};
     for (let i = 0; i <= 3; i++) {

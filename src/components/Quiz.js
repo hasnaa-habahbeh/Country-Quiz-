@@ -7,10 +7,6 @@ const Quiz = ({ countriesArray }) => {
   const [end, setEnd] = useState(false);
   const [counter, setCounter] = useState(0);
 
-  useEffect(() => {
-    console.log('counter: ', counter);
-  }, [counter]);
-
   return (
     <Card>
       {end && (
