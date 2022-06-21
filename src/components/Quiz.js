@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import Card from './Shared/Card';
-import Question from './Question';
-import End from './End';
+import React, { useState, useEffect } from "react";
+import Card from "./Shared/Card";
+import Question from "./Question";
+import End from "./End";
 
-const Quiz = ({ countriesArray }) => {
+const Quiz = ({ countriesArray, setShowImage }) => {
   const [end, setEnd] = useState(false);
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    console.log('counter: ', counter);
-  }, [counter]);
+    setShowImage(end ? "hide-image" : "show-image");
+  }, [end]);
 
   return (
     <Card>
@@ -21,7 +21,7 @@ const Quiz = ({ countriesArray }) => {
           countriesArray={countriesArray}
         />
       )}
-      {end && <End counter={counter} />}
+      {end && <End counter={counter} setCounter={setCounter} setEnd={setEnd} />}
     </Card>
   );
 };

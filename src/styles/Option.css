@@ -1,0 +1,47 @@
+.choice {
+  border-radius: 12px;
+  border: solid #6066d0cc 2px;
+  color: #6066d0cc;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  padding: 14px 0 14px 20px;
+  width: inherit;
+}
+
+.choice-content {
+  padding-left: 46px;
+}
+
+.choice:hover {
+  background-color: #f9a826;
+  border-color: #f9a826;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: #60bf88;
+  border-color: #60bf88;
+  color: #ffffff;
+  position: relative;
+}
+
+.correct::after {
+  color: #f2f2f2;
+  content: "check_circle_outline";
+  font-family: "Material Icons";
+  font-size: 20px;
+  position: absolute;
+  right: 18px;
+}
+
+.incorrect::after {
+  color: #f2f2f2;
+  content: "highlight_off";
+  font-family: "Material Icons";
+  font-size: 20px;
+  position: absolute;
+  right: 18px;
+}
