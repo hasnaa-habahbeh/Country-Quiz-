@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useGetCountry } from "./hooks/useGetCountry";
 import Header from "./components/Header";
 import Quiz from "./components/Quiz";
 import Footer from "./components/Footer";
@@ -6,13 +7,11 @@ import "./styles/normalize.css";
 import "./styles/App.css";
 
 const App = () => {
-  const [countriesArray, setCountriesArray] = useState([]);
+  const [fetchCountry, countriesArray] = useGetCountry();
   const [showImage, setShowImage] = useState("show-image");
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3/all")
-      .then((response) => response.json())
-      .then((data) => setCountriesArray(data));
+    fetchCountry();
   }, []);
 
   return (
